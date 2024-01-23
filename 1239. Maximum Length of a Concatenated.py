@@ -33,6 +33,7 @@ class Solution(object):
             if index == len(arr):
                 return len(current_str)
 
+
             # Include the current string
             include_length = 0
             if checkunique(current_str + arr[index]):
