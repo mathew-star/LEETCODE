@@ -3,7 +3,10 @@ Given an array of integers arr, return true if and only if it is a valid mountai
 
 Recall that arr is a mountain array if and only if:
 
+Strictly increasing and strictly decreasing
 
+Approach>> used two variables>> st_dec and st_in to track if strictly increasing and decreasing 
+when the loop stops where it can't find any more increasing numbers the a function strict_dec will run with the current i and array as the arguments and check if the rest is strictly decresing
 """
 class Solution(object):
     def validMountainArray(self, arr):
