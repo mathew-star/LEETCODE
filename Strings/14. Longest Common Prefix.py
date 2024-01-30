@@ -25,4 +25,21 @@ class Solution(object):
             prefix = comman(prefix,strs[i])
         return prefix
         
-        
+"""
+Binary search approach>>
+"""  
+strs =\
+["flower","flow","flight"]
+def prefix(strs):
+    if not strs:
+        return ""
+    min_str= min(strs,key=len)
+    l=0
+    h=len(min_str)-1
+    while l<=h:
+        mid = (l + h) //2
+        if all(s.startswith(min_str[:mid+1]) for s in strs):
+            l= mid+1
+        else:
+            h= mid-1
+    return min_str[:l]
